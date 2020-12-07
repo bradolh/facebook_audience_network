@@ -228,8 +228,8 @@ class _FacebookNativeAdState extends State<FacebookNativeAd>
       return Container(
         width: width,
         height: widget.adType == NativeAdType.NATIVE_AD
-            ? widget.height
-            : widget.bannerAdSize.height.toInt(),
+            ? widget.height.toDouble()
+            : widget.bannerAdSize.height.toDouble(),
         child: UiKitView(
           viewType: _getChannelRegisterId(),
           onPlatformViewCreated: _onNativeAdViewCreated,
